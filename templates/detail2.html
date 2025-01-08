@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Royal Furniture</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+
+</head>
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <p style="text-align: center;color: rgb(180, 179, 179);">Furniture Inspired By You</p>
+ <nav>
+    <ul>
+      <li  class= "{% if request.path == '/home/' %}active{% endif %}" ><a href="{% url "home" %}"><B>Home</B></a></li>
+      <li  class= "{% if request.path == '/sofa/' %}active{% endif %}" ><a href="{% url "sofa" %}"><B>Sofa</B></a></li>  
+      <li  class= "{% if request.path == '/bedset/' %}active{% endif %}" ><a href="{% url "beds" %}"><B>Bed set</B></li>  
+      <li  class= "{% if request.path == '/chairs/' %}active{% endif %}" ><a href="{% url "chair" %}"><B>Chairs</B></a></li> 
+
+      <li ><a href=""><B>About Us</B></a></li> 
+      <li  class= "{% if request.path == '/ContactUs/' %}active{% endif %}"><a href={% url "contact" %}><B>Contact Us</B></a></li> 
+      
+    </ul>
+ </nav>
+    
+   
+
+  <style>
+    nav {
+      width: 100%;
+      height: 48px;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 40px;
+    }
+    nav ul li a {
+      font-weight: 300;
+      color: #adadad;
+      text-decoration: none;
+      transition: 60ms;
+    }
+    nav ul li a:hover {
+      color: #67b4ae;
+      
+    }
+    
+    
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin-left: 450px;
+}
+img{
+     
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+   
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+    
+    
+    
+    
+}
+  
+  #btn1{
+      width: 50px;
+      height: 50px;
+      
+      background-color: red;
+  }
+  #btn2{
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+}
+#btn3{
+  width: 50px;
+  height: 50px;
+  background-color:black;
+}
+#btn4{
+  width: 50px;
+  height: 50px;
+  background-color: light-orange;
+}
+.img-item{
+    margin: 0.3rem;
+   
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3)
+{
+    margin-right: 0;
+   
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size:  18px;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size:  18px;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+   
+    background-size: 18px;
+    
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.2px solid #ddd;
+    text-align: center;
+    padding: 13px;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 80px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+    
+}
+.purchase-info .btn:first-of-type{
+    background: red;
+}
+
+.purchase-info .btn:hover{
+    opacity: 0.6;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+footer {
+  width: 100%;
+  height: 500px;
+  background: #9c8a8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.footer-main {
+  width: 1000px;
+}
+
+.footer-ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-ul ul {
+  list-style: none;
+}
+.footer-ul ul li {
+  margin: 7px 0;
+}
+.footer-ul ul li h4 {
+  color: #34495e;
+  font-size: .7rem;
+}
+.footer-ul ul li a {
+  color: #000000;
+  font-size: .7rem;
+}
+.footer-ul ul li a:hover {
+  text-decoration: underline; 
+  color: #c92828;
+ 
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
+  </style>
+  <body>
+
+    
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img id='pic' src = "/Media/{{beds.bed_img}} " alt = "shoe image">
+              <img id='pic' src = "/Media/{{beds.service_img1}} " alt = "shoe image">
+              <img id='pic' src = "/Media/{{beds.service_img2}} " alt = "shoe image">
+              <img id='pic' src = "/Media/{{beds.service_img2}} " alt = "shoe image">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              
+              <a href = "#" data-id = "1">
+                <button id="btn1" onclick="Change1()"></button>
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <button id="btn2" onclick="Change2()"></button>
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <button id="btn3" onclick="Change3()"></button>
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <button id="btn4" onclick="Change4()"></button>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">{{beds.bed_title}}</h2>
+         
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>
+            <span>4.7(21)</span>
+          </div>
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price: <span>PKR 95,000</span></p>
+            <p class = "new-price">New Price: <span>{{beds.bed_price}}</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>about this item: </h2>
+            <p>{{beds.bed_des}}</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            
+          </div>
+
+          <div class = "social-links">
+            <p>Share At: </p>
+            <a href = "#">
+              <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-whatsapp"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
+<script>
+  function Change1(){
+    document.getElementById('pic').src='/Media/{{beds.bed_img1}}'
+  }
+  function Change2(){
+    document.getElementById('pic').src='/Media/{{beds.bed_img2}}'
+  }
+  function Change3(){
+    document.getElementById('pic').src='/Media/{{beds.bed_img3}}'
+  }
+  function Change4(){
+    document.getElementById('pic').src='/Media/{{beds.bed_img}}'
+  }
+</script>
+
+<footer>
+  <div class="footer-main"> 
+    
+    
+    <div class="footer-ul">
+      <ul>
+        <h4>Company</h4>
+  <li><a href="#">Terms of Services</a></li>
+  <li><a href="#">Privacy Policy</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><a href="#">Our Blog</a></li>
+
+      </ul>
+      
+      <ul>
+        <h4>Need Help?</h4>
+        <li><a href="#">FAQ's</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shipping Information</a></li>
+      </ul>
+      
+      <ul>
+        <div class=footer-main3>
+          <h4>Contact Us</h4>
+          <P>✉ theRoyalfurniture@gmail.com
+           </P>
+           <P>Timings: 10AM-10 PM (Mon-Fri)</P>
+           <P>+92 3044324314</P>
+        </div>
+      </ul>
+      
+    
+    </div>
+
+ </footer>
+

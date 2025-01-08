@@ -1,0 +1,15 @@
+{% include "header.html" %}
+
+<div class='top'>
+    <P>Chairs</p>
+    </div>  
+  
+    {%for n in chair%}
+    <div class="card">
+      <a href={% url "detail3"  n.id %}><img  src="/Media/{{n.chairs_img}} "  /></a>
+      <h4>{{n.chairs_title}}</h4>
+      <p class='price'><s class='strike'>PKR 32,000</s> {{n.chairs_price}}</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    {%endfor%}
+{%include "footer.html"%}

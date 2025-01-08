@@ -1,0 +1,18 @@
+{% include "header.html" %}
+
+<div class='top'>
+  <P>Sofa Set</p>
+  </div>  
+
+  {%for n in ServiceData%}
+  <div class="card">
+    <a href={% url "details"  n.id %}><img src="/Media/{{n.service_img}} "  /></a>
+    <h4 >{{n.service_title}}</h4>
+    <p ><s class='strike'>PKR 95,000</s> {{n.service_price}}</p>
+    
+    <p> <a href={% url "cart"  n.id %}> <button >Add to cart</button></p></a>
+    
+  </div>
+  {%endfor%}
+
+{% include "footer.html" %}

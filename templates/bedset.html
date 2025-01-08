@@ -1,0 +1,15 @@
+{% include "header.html" %}
+<div class='top'>
+<P>Bed Set</p>
+</div>   
+{%for n in beds%}
+<div class="card">  
+  <a href={% url "detail2"  n.id %}><img  src="/Media/{{n.bed_img}} "  /></a>
+  <h4>{{n.bed_title}}</h4>
+  <p class='price'><s class='strike'>PKR 10,0000</s> {{n.bed_price}}</p>
+  <p> <a href={% url "cart"  n.id %}> <button >Add to cart</button></p></a>
+</div>
+{%endfor%}
+
+
+{%include "footer.html"%}

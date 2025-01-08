@@ -1,0 +1,330 @@
+
+
+*{box-sizing: border-box}
+body {font-family: sans-serif; margin:0}
+.mySlides {display: none;
+
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+
+
+}
+nav {
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  position: fixed;
+  z-index: 1;
+  
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 30px;
+}
+nav ul li a {
+  font-weight: 300;
+  color: #adadad;
+  text-decoration: none;
+  transition: 60ms;
+}
+nav ul li a:hover {
+  color: #67b4ae;
+  
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 10000px;
+  position: relative;
+  margin: auto;
+  overflow-x: hidden;
+
+  
+
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #110b0b;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.product-listing
+ {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  cursor: pointer;
+}
+.container {
+  width: 1070px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  transition: transform .2s;
+}
+.grid-product {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+.grid-product:hover {
+  background: #e1e1e1;
+  transform: scale(1.1);
+}
+.grid-product img {
+  width: 220px;
+ 
+}
+.grid-detail {
+  margin: 20px 0;
+  text-align: center;
+}
+.grid-detail p:last-child {
+  transition: .5s;
+  margin-top: 10px;
+}
+.grid-product:hover > .grid-detail p:last-child {
+  color: #000000;
+
+}
+.grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.grid-product-full {
+  background: #f1f1f1;
+  grid-column: span 3;
+  display: flex;
+  position: relative;
+}
+.grid-detail-sum {
+  position: absolute;
+  top: 35%;
+  right: 12%;
+  text-align: center;
+}
+footer {
+  width: 100%;
+  height: 500px;
+  background: #274d70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.footer-main {
+  width: 1000px;
+}
+
+.footer-ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-ul ul {
+  list-style: none;
+}
+.footer-ul ul li {
+  margin: 7px 0;
+}
+.footer-ul ul li h4 {
+  color: #34495e;
+  font-size: .7rem;
+}
+.footer-ul ul li a {
+  color: #000000;
+  font-size: .7rem;
+}
+.footer-ul ul li a:hover {
+  text-decoration: underline; 
+  color: #c92828;
+ 
+}
+
+.star{
+  background-color: #fffafa;
+  width: 100%;
+  height: 50px;
+  transition: .6s;
+  background-size: cover;
+ 
+  
+}
+.active a{
+  background-color: #003049;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  float: left;
+  font-family: arial;
+  margin-left: 100px;
+
+  
+}
+.strike{
+  color: #000000;
+  margin: 10px;
+}
+
+.card img{
+  
+  height: 300px;
+  width: 300px;
+  transition: .3s;
+}
+.card img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.price {
+  color: rgb(204, 112, 37);
+  font-size: 16px;
+  
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #973232;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.contact{
+  margin-top: 130px;
+  margin-left: 220px;
+}
+.blg img{
+  margin-left: 600px;
+  margin-top: 30px;
+  
+}
+.blg p{  
+  font-size: 18px;
+  margin-left: 600px;
+  margin-top: 40px;  
+  
+}
+
+.system{
+  margin-left: 600px;
+}
+.top{
+  font-size: 40px;
+  margin-left: 100px;
+  margin-top: 160px;
+  
+}
+.signoutt{
+  text-decoration: none;
+  color: #000000;
+  background-color: #a2e7ba;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 4px;
+ margin-left: 10px;
+ font-weight: 600;
+
+
+
+}
+
+
+
+

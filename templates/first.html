@@ -1,0 +1,193 @@
+{% include "header.html" %}
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  
+  <img src="/static/px.jpeg" style="width:100%"  height="850px">
+
+</div>
+
+<div class="mySlides fade">
+  
+  <img  src="/static/front pic3.PNG" style="width:100%" height="850px">
+</div>
+  <div class="text"></div>
+
+</div>
+
+<div class="mySlides fade">
+  
+  <img  src="/static/front pic 5.PNG" style="width:100%" height="850px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<P style="text-align: center;font-size: 50px;color: black;"> Your vision, our craft</P>
+
+    
+
+    
+    <img style="height: 500px;width: 360px;margin-left: 900px;margin-top: 100px; position: absolute;border-radius: 10px; "src='/static/px5.jpg'>
+   <P style="font-size: 40px;margin-top: 130px;margin-left: 200px;">Furniture&Forever </p> 
+     <P style="font-size: 20px;margin-left: 200px;margin-top: -25px;"> Furniture that Defines Your Space</P>
+    <br>
+   <P style="font-size:50px;margin-left: 200px;margin-top: 200px;">Our Story</P>
+   <P style="font-size:14px;margin-left: 200px;margin-top: -25px;"><b>A journey built on quality, timeless design, and a commitment, making your house truly feel like <br> a home. Each piece we create is the epitome of our dedication to excellence. Made with the finest <br> materials both with traditional techniques and modern innovation to deliver exceptional quality.</b></P>
+
+  
+  
+  
+   <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 3 seconds
+    }
+    </script>
+
+<section class="product-listing">
+ 
+  <div class="container">
+    <h2 style="margin-right:800px ;margin-top: 150px;">Product Collection</h2>
+    <div class="grid">
+      <div class="grid-product">
+        <img src="/static/px12.jpg">
+        <div class="grid-detail">
+           <P><a style='text-decoration: none;color: black;' href="{% url "chair" %}">Chairs →</P></a>
+        </div>
+      </div>
+     
+        
+        <div class="grid">
+          <div class="grid-product">
+            <img src="/static/px10.jpg">
+            <div class="grid-detail">
+               <P><a style='text-decoration: none;color: black;' href="{% url "beds" %}">Bed Set →</P></a>
+             
+            </div>
+          </div>
+            <div class="grid">
+              <div class="grid-product">
+                <img src="/static/px11.jpg">
+                <div class="grid-detail">
+                   <P><a style='text-decoration: none; color: black;' href="{% url "chair" %}"> Dinning Table →</P><a>
+                   
+                 
+                </div>
+              </div>
+             
+        
+                <div class="grid">
+                  <div class="grid-product">
+                    <img src="/static/px13.jpg" >
+                    <div class="grid-detail">
+                       <P ><a style='text-decoration: none;color: black;' href="{% url "sofa" %}">Sofa →</P></a>
+                    </div>
+                  </div>
+         
+                </section>
+        
+          <style>
+            .pic{
+             
+          display: flex;
+          flex-wrap: nowrap; 
+        }
+        .pic2{
+          display: flex;
+          flex-wrap: nowrap;
+          
+        }
+        .pic3{
+          display: flex;
+          flex-wrap: nowrap;
+          
+        }
+        .pic4{
+          display: flex;
+          flex-wrap: nowrap;
+          
+        }
+        .all{
+            margin: 150px;
+        }
+        
+        </style>
+        <section class="all">
+        
+        <img style="  height: 600px;
+            width: 500px;float: right;margin-top: 24px;position: absolute;margin-left: 600px;border-radius: 10px;" src="/static/why.jpg">
+        <br>
+        
+        <p style="font-size: 30px;font-weight: 800;">Why Choose Us </p> 
+          
+        <p style="font-size: 16px;">Royal Furniture believe in making your furniture dreams come true.<br><br>  We help you to mould  your dream furniture down to the minute detail.</P>
+         
+        <br>
+            <div class="pic">
+                
+            <img src="/static/truck.svg">
+        </div>
+           
+            <p style="font-size: 16px;">Royal Furniture believe in making your <br>furniture dreams come true. We help you to mould <br>
+                your dream furniture down to the minute detail.</P></div>
+                <div class="pic3">
+            <img  src="/static/bag.svg">
+            </div> 
+             <p style="font-size: 16px;">Royal Furniture believe in making your <br>furniture dreams come true. We help you to mould <br>
+                    your dream furniture down to the minute detail.</P>
+                </div>
+               
+                <div class="pic2">
+                   
+                <img src="/static/support.svg">
+                </div>
+                <p style="font-size: 16px;">Royal Furniture believe in making your <br>furniture dreams come true. We help you to mould <br>
+                    your dream furniture down to the minute detail.</P>
+                   
+              
+                </section>
+               
+                                                   
+         </section>  
+    
+                         
+                    
+                            
+                                                     
+       
+
+            
+           {% include "footer.html" %}
+          
+
+
+      

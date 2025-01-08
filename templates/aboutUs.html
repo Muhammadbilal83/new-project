@@ -1,0 +1,179 @@
+{% include "header.html" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .columnsss {
+    float: left;
+    width: 350px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    padding: 0 8px;
+   
+  }
+  
+  .columnsss1 {
+   
+    width: 350px;
+    margin-bottom: 16px;
+    margin-left: 400px;
+    padding: 0 8px;
+   
+  }
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  
+  .carders img{
+    border-radius: 100%;
+    
+  }
+  
+  .containerss {
+    padding: 0 16px;
+    text-align: center;
+    
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .heading{
+      text-align: center;
+  }
+  .title {
+    color: grey;
+  }
+  
+  .buttonsss {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .buttonsss:hover {
+    background-color: #555;
+  }
+  .icons{
+    text-align: center;
+  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+ 
+
+  font-family: "Poppins", sans-serif;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #fff;
+  margin-top: 150px;
+}
+
+.pic {
+  height: 450px;
+  width: 450px;
+  border-radius: 12px;
+  
+}
+
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  width: 500px;
+}
+
+.text h2 {
+  margin-top: 100px;
+  color: #333;
+  font-size: 50px;
+  font-weight: 600;
+  
+}
+
+.text h5 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+span {
+  color: red;
+  font-weight: 600;
+}
+
+.text p {
+  color: #333;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-bottom: 100px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <section class="about-us">
+    <div class="about">
+      <img src="/static/why.jpg"  class="pic" />
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Royal Furniture & <span>Designers</span></h5>
+        <p>We at Royal Furniture believe in making your furniture dreams come true. We help you to mould 
+          your dream furniture down to the minute detail.A journey built on quality, timeless design, and a commitment, making your house truly feel like  a home. Each piece we create is the epitome of our dedication to excellence. Made with the finest materials both with traditional techniques and modern innovation to deliver exceptional quality.Our lives happen around our furniture. Every day, our bed frames, dining tables, dressers, and coffee tables support us, often without thanks and appreciation. Here we’re taking a look back at some of the best acknowledgements of the importance our furniture plays in our lives.Everything is designed.Few things are designed well.</p>
+       
+      </div>
+    </div>
+  </section>
+
+
+
+<br>
+
+
+  
+
+</body>
+</html>
+{% include "footer.html" %}

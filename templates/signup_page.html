@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Furniture</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+    </head>
+<body>
+    <center>
+        <h1 style="color:red;text-transform: uppercase;">{{error}}</h1>
+        <h1 style="color:black;text-transform: uppercase;">{{info}}</h1>
+    <center>
+    <div class="registerbox">
+     
+    <div class="registerbody" id="signupbody"  style="height: auto;" >
+        <h1 style="margin-bottom: 10px">Signup</h1>
+        <form  method="POST" action="#">
+            {% csrf_token %}
+            <div class="inputdiv">
+                <div>
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <input type="text"  placeholder="username" required name="name" >
+            </div>
+            <div class="inputdiv">
+                <div>
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <input type="email"  placeholder="Email" required name="email" >
+            </div>
+            <div class="inputdiv">
+                <div>
+                    <span class="material-symbols-outlined">password</span>
+                </div>
+                <input type="password"  placeholder="password" required name="password1">
+            </div>
+            <div class="inputdiv">
+                <div>
+                    <span class="material-symbols-outlined">password</span>
+                </div>
+                <input type="password"  placeholder="confirm password" required name="password2" >
+            </div>
+            <button type="submit" class="loginbtn">Signup</button>
+            <button style=" background-color: #003049;" type="button"  class="signupbtn"><a style="text-decoration: none; color: white;" href="/login/">Login</a></button>
+        </form>
+    </div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+

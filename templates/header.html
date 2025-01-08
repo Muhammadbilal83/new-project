@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Royal Furniture</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <p style="text-align: center;color: black;"><b>Furniture Inspired By You</b></p>
+ <nav>
+  <div>
+  <B style=" margin-left: -140px; font-size: 20px;  font-weight: 900;"><b style=" font-size: 40px;">R</b>oyal Furniture.</B>
+  </div>
+    <ul>
+      
+      <li  class= "{% if request.path == '/home/' %}active{% endif %}" ><a href="{% url "home" %}"><B>Home</B></a></li>
+      <li  class= "{% if request.path == '/sofa/' %}active{% endif %}" ><a href="{% url "sofa" %}"><B>Sofa</B></a></li>  
+      <li  class= "{% if request.path == '/bedset/' %}active{% endif %}" ><a href="{% url "beds" %}"><B>Bed set</B></li>  
+      <li  class= "{% if request.path == '/chairs/' %}active{% endif %}" ><a href="{% url "chair" %}"><B>Chairs</B></a></li>  
+      <li  class= "{% if request.path == '/Aboutus/' %}active{% endif %}"><a href="{% url "Aboutus" %}"><B>About Us</B></a></li> 
+      <li  class= "{% if request.path == '/ContactUs/' %}active{% endif %}"><a href="{% url "contact" %}"><B>Contact Us</B></a></li>
+
+      
+      
+ 
+      <form method="get">
+        <input type="text" name="servicename" placeholder="Search.." value=""/ style=" width: 180px;padding: 6px;">
+        <button type="submit" value="Serach" style=" width: 28px;padding: 5px;  background: #2196F3;cursor: pointer;"><i class="fa fa-search"></i></button>
+      </form>
+     
+      <a class="signoutt" href="/signout">SignOut</a>
+      
+    </ul>
+ </nav>
